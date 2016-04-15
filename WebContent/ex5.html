@@ -1,0 +1,45 @@
+<html>
+
+	<head>
+	
+		<script>
+		
+			var nomes= [];
+			function add(){
+				//Leitura
+				elNome = document.getElementById("nome");
+				
+				//Adicionar no vetor
+				
+				nomes.push(elNome.value);
+				
+				
+				saida ="";
+				
+				for (i =0 ; i<nomes.length;i++){
+					saida=saida + nomes[i] +" ";
+				}
+				//Impressao
+				elClientes = document.getElementById("clientes");
+				elClientes.innerHTML = saida;
+			}
+			
+		</script>
+	
+	</head>
+
+	<body>
+		<!-- Comentário -->
+		<input id="nome" type="text"  />
+		<input type="button" value="add" onclick="add()"/>
+		
+		
+		<p id="clientes">
+			
+		</p>
+		
+	</body>
+
+	
+	
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+	<head>
+		<script>
+			function copiar(){
+			
+				var c1 =  document.getElementById("campo1");
+				var c2 =  document.getElementById("campo2");
+				c2.value= c1.value;
+			}		
+		
+		</script>
+	
+	</head>
+	<body>
+	
+		<form >
+			Campo 1: <input type="text" id="campo1" value="" />
+			<br/>
+			Campo 2: <input type="text" id="campo2" value="" />
+			<br/>
+			<button type="button" onclick="copiar()"> Copiar </button>
+		</form>
+	
+	
+	<body>
+</html>

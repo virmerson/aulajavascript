@@ -1,0 +1,38 @@
+<html>
+
+<body>
+<h1>Explorando o DOM</h1>
+
+<style>
+
+.azul{
+	background-color:blue;
+}
+.vermelho{
+	background-color:red;
+}
+</style>
+
+<script>
+
+function trocaCor(){
+	var el = document.getElementsByTagName("button");
+	
+	if(el[0].className=="azul"){
+		el[0].setAttribute("class", "vermelho")
+	}else{
+		el[0].setAttribute("class", "azul")
+	}
+	
+	console.log(el[0]);
+}
+</script>
+
+<body>
+
+
+<button  class="azul" onclick="trocaCor()"> OK </button>
+<button> Cancelar </button>
+
+</body>
+</html> 

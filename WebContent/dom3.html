@@ -1,0 +1,86 @@
+<html>
+
+<body>
+<h1>Explorando o DOM</h1>
+
+<style>
+
+	.divLinha{
+		margin:10px;
+		border:1px solid #0000ff
+	}
+
+</style>
+
+<script>
+i=0;
+function adicionarBotao(){
+	//Ja existente
+	var lista =  document.getElementById("listaContatos");
+	
+	var idDiv = "id"+i;
+	//Div
+	var div =  document.createElement("div");
+	div.setAttribute("id",idDiv);
+	div.setAttribute("class","divLinha");
+	
+	// <input type="text"/>
+	
+	var input =  document.createElement("input");
+	input.setAttribute("type","text");
+	
+	// <label> Fone: </label>
+	var label =  document.createElement("label");
+	label.innerHTML="Fone:"
+	
+	// <input type="button" value="-"/>
+	var btnRemove =  document.createElement("input");
+	btnRemove.setAttribute("type","button");
+	btnRemove.setAttribute("value","-");
+	btnRemove.onclick=function(){
+		var dRemove = document.getElementById(idDiv);
+		lista.removeChild(dRemove);
+	}
+	
+	
+	// </br>
+	var br =  document.createElement("br");
+	
+	i++;
+	
+	
+	
+	//Adicionando botao como filho da area
+	div.appendChild(label);
+	div.appendChild(input);
+	div.appendChild(btnRemove);
+	div.appendChild(br);
+	
+	
+	lista.appendChild(div);
+	
+	
+}
+
+
+ 
+</script>
+
+<body>
+Cadastro de Cliente
+
+<form >
+	Nome <input type="text"> 
+	
+	<fieldset id="listaContatos"> 
+		<legend> Contatos </legend>
+	
+	
+	</fieldset>
+<input type="button"   onclick="adicionarBotao()" value="+"/> 
+
+
+</form>
+
+</body>
+</html> 
