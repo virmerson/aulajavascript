@@ -1,0 +1,46 @@
+<html>
+
+	<head>
+
+			<script type="text/javascript">
+
+					var foo = function (){
+
+							var a=3, b=5;
+
+							var bar = function(){
+
+								var b=7, c=11;
+
+								a = a+  b + c; //?  a= 7 + 11 =>  a= 21
+							}
+
+							//a =3
+							//b= 5
+							//c= undefined
+
+							bar ();
+							//a=21 
+							//b=5		
+
+					};
+
+
+
+				var myObject = (function () { 
+
+
+				});
+
+
+			</script>
+
+
+	</head>
+
+	<body>
+
+
+
+	</body>
+</html>

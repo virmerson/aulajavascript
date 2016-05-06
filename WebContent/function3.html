@@ -1,0 +1,37 @@
+<html>
+
+	<head>
+
+			<script type="text/javascript">
+				var calculadora = (function (){
+						var r ; 
+						return {
+							somar:function(n1,n2){
+								r=  n1+n2;
+							}, 
+
+							subtrair: function(n1,n2){
+								r= n1-n2;
+							},
+							getRes:function (){
+								return r;
+
+							}
+						}
+
+				} ());
+
+				calculadora.somar(10,20);
+				document.writeln(calculadora.getRes());
+
+			</script>
+
+
+	</head>
+
+	<body>
+
+
+
+	</body>
+</html>

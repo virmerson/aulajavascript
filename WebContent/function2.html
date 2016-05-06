@@ -1,0 +1,57 @@
+<html>
+
+	<head>
+
+			<script type="text/javascript">
+
+
+				
+
+					var myObject = (function  (){
+
+
+							var value=0;
+
+							return {
+
+							
+								increment:function(inc){
+								
+									value+= (typeof inc ==='number')?inc:1;
+							
+								},
+
+								decrement:function (dec){
+									value-= (typeof dec ==='number')?dec:1;
+
+								},
+
+								getValue:function(){
+									return value;
+								}
+							};
+
+
+
+					}());
+
+
+
+
+					myObject.increment();
+
+					myObject.increment();
+
+					document.writeln(myObject.getValue());
+
+			</script>
+
+
+	</head>
+
+	<body>
+
+
+
+	</body>
+</html>

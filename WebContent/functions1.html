@@ -1,0 +1,69 @@
+<html>
+
+	<head>
+
+			<script type="text/javascript">
+
+
+					/* var myObject ={
+
+							value:0,
+							increment:function(inc ){
+								if(type inc ==='number'){
+									this.value+= inc;
+								}else{
+									this.value+=1;
+								}
+							}
+					};*/
+
+					var myObject ={
+
+							value:0,
+							increment:function(inc){
+								
+								this.value+= (typeof inc ==='number')?inc:1;
+							
+							},
+
+							decrement:function (dec){
+									this.value-= (typeof dec ==='number')?dec:1;
+
+							}
+					};
+
+
+					myObject.increment("oi");
+					document.writeln(myObject.value);	 //1
+					myObject.increment(2);
+					document.writeln(myObject.value); // 3
+					myObject.decrement( );
+					document.writeln(myObject.value); // 2
+					myObject.decrement(2);
+					document.writeln(myObject.value);// 0
+
+					for (i = 0; i<1000 ; i++){
+						myObject.increment( );
+					}
+
+					document.writeln(myObject.value); // 1000	
+
+
+					for (i=0; i<500; i++){
+
+							myObject.decrement();
+					}
+					document.writeln (myObject.value) ; //???500
+
+
+			</script>
+
+
+	</head>
+
+	<body>
+
+
+
+	</body>
+</html>
