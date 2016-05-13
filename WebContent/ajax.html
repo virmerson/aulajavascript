@@ -1,0 +1,37 @@
+<html>
+
+	<head>
+
+			<script type="text/javascript">
+				function loadDoc() {
+					//Cria um objeto Ajax
+  					var xhttp = new XMLHttpRequest();
+  					//Callback da Requisição
+  					xhttp.onreadystatechange = function() {
+    				if (xhttp.readyState == 4 && xhttp.status == 200) {
+     						document.getElementById("demo").innerHTML = xhttp.responseText;
+    				}
+				};
+
+  					//Configura a requisição
+  					xhttp.open("GET", "ajax_info.txt", true);
+
+  					//Faz a requisição
+  					xhttp.send();
+				}
+
+			</script>
+
+
+	</head>
+
+	<body>
+
+
+		<div id="demo"><h2>Este é o texto inicial</h2></div>
+
+		<button type="button" onclick="loadDoc()">Carregar Conteudo</button>
+
+
+	</body>
+</html>
